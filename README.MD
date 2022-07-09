@@ -4,5 +4,5 @@
 ## Ícones
 :package: - Nova funcionalidade
 :recycle: - Atualização
-:beetle:  - Correção de bug
+:ant:  - Correção de bug
 :checkered_flag: - Release
