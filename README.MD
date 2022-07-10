@@ -2,7 +2,7 @@
 # Portfolio
 
 ## Ícones
-:package: - Nova funcionalidade
-:recycle: - Atualização
-:ant:  - Correção de bug
-:checkered_flag: - Release
+- :package: - Nova funcionalidade
+- :recycle: - Atualização
+- :bug:  - Correção de bug
+- :checkered_flag: - Release
