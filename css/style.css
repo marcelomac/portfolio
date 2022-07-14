@@ -31,7 +31,7 @@
 }
 
 /* classe show-menu é criada dentro da classe conteiner por javascript
-   elementos filhos (ex: hamburguer) do elemento que tiver 'show-menu' herdam a formatação */
+   elementos filhos (ex: hamburguer) do elemento que tiverem 'show-menu', herdam a formatação */
 .show-menu .hamburguer {
   right: 16rem;
 }
@@ -162,23 +162,27 @@ header {
   animation: moveBanner 1s 0.7s forwards;
 }
 
-.banner button {
+
+.btn {
   font-family: var(--font-action);
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   background: #ad5389; /* fallback for old browsers */
-
   /* Chrome 10-25, Safari 5.1-6 :*/
   background: -webkit-linear-gradient(to right, #ad5389, #3c1053);
-
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ :*/
   background: linear-gradient(to right, #ad5389, #3c1053);
-
-  padding: 1rem 3rem; /* dois valores: 1)top e bottom  2)left e right*/
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 0.5rem 0.7rem rgba(0, 0, 0, 0.5);
+
+}
+
+
+.banner button {
+  padding: 1rem 3rem; /* dois valores: 1)top e bottom  2)left e right*/
   opacity: 0;
   animation: moveBanner 1s 0.9s forwards;
 }
@@ -362,7 +366,7 @@ O seletor corresponde a cada elemento que é o enésimo filho de seu pai.:nth-ch
   width: 100%;
   height: 100%;
   background-color: rgba(31, 29, 29, 0.164);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 /* https://www.w3schools.com/css/css3_object-fit.asp*/
@@ -374,46 +378,46 @@ O seletor corresponde a cada elemento que é o enésimo filho de seu pai.:nth-ch
   object-fit: fill;
   width: 100%;
   height: 20rem;
-  border-radius: .5rem;
-  opacity: .8;
-  transition: opacity .3s;
+  border-radius: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s;
 }
 
 .card:hover .card-img-wrapper img {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .card-info {
-  position: absolute;
   /* para que os elementos da classe fiquem sobrepostos à div img-wrapper. 
-     O posicionamento absolute precisa estar dentro de um elemento relativo */
+  O posicionamento absolute precisa estar dentro de um elemento relativo */
+  position: absolute;
   bottom: 0; /* posiciona a div 'card-info' a partir do bottom do 'card'*/
   opacity: 0;
   visibility: hidden;
   padding: 2rem;
-  text-shadow: 0.3rem 0.2rem 0.3rem rgba(0,0,0,.6); /* 1)distanciamento da sombra à direita, 2) distanciamento abaixo, 3) blur e 4) cor*/;
-  transition: all .3s;
+  text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6); /* 1)distanciamento da sombra à direita, 2) distanciamento abaixo, 3) blur e 4) cor*/
+  transition: all 0.3s;
 }
- 
+
 .card-info h2 {
   font-family: var(--font-primary);
   font-size: 2rem;
   font-weight: 500;
-  color: #eee;
+  color: black;
 }
 
 .card-info h3 {
   font-family: var(--font-action);
   font-weight: bolder;
-  color:rgb(148, 44, 101);
+  color: rgb(148, 44, 101);
   margin-bottom: 1.5rem;
 }
 
 .card-info p {
   font-family: var(--font-secundary);
-  font-size: .8rem;
-  color: #eee;
-  font-weight: 400;
+  font-size: 0.8rem;
+  color: black;
+  font-weight: 800;
   width: 80%;
   margin-bottom: 2rem;
 }
@@ -421,24 +425,8 @@ O seletor corresponde a cada elemento que é o enésimo filho de seu pai.:nth-ch
 .card-info button {
   width: 8rem;
   height: 2.5rem;
-
-  font-family: var(--font-action);
-  font-size: 1rem;
-  color: #fff;
-  text-transform: uppercase;
   letter-spacing: 0.1rem;
-  background: #ad5389; /* fallback for old browsers */
-
-  /* Chrome 10-25, Safari 5.1-6 :*/
-  background: -webkit-linear-gradient(to right, #ad5389, #3c1053);
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ :*/
-  background: linear-gradient(to right, #ad5389, #3c1053);
-
-  padding: .1rem .3rem; /* dois valores: 1)top e bottom  2)left e right*/
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 0.1rem 0.3rem; /* dois valores: 1)top e bottom  2)left e right*/
 }
 
 /* ao passar o mouse sobre o .card, aplica um efeito sobre .card-info: */
@@ -451,10 +439,109 @@ O seletor corresponde a cada elemento que é o enésimo filho de seu pai.:nth-ch
 
 @keyframes moveCard {
   0% {
-    transform: translateY(10rem)
+    transform: translateY(10rem);
   }
   100% {
     transform: translateY(0);
-    
-  } 
-} 
+  }
+}
+
+.sessao-contato{
+  width: 100%;
+  height: 100vh;
+  background-color: #272727;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contato-wrapper {
+  width: 60%;
+  height: 30rem;
+  display: flex;
+  /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.contato-left {
+  width: 35%;
+  background: linear-gradient(rgba(15,15,15,0.6), rgba(22,22,22,0.9)), url(../imagens/bg-contato.jpg);
+  background-size: cover;
+}
+
+.contato-right {
+  width: 65%;
+  background-color: #eee;
+  padding: 1rem 3rem 3rem 3rem;
+}
+
+.sessao-contato h1 {
+  font-family: var(--font-primary);
+  text-align: center;
+  color: #272727;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.sessao-contato form {
+  width: 100%;
+  display: flex;
+  /* altera a direção dos elementos de linha (padrão) para colunas:*/
+  flex-direction: column;
+  align-items: center;
+}
+
+.field-group {
+  /* para possibilitar o 'field-label' ter uma "position: absolute" :*/
+  position: relative;
+}
+
+.field {
+  background: transparent;
+  border: none;
+  width: 20rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  font-family: var(--font-secundary);
+  border-bottom: 1px dashed #636363;
+  /* remove as bordas quando o elemento é selecionado:*/
+  outline: none;
+  /* top and bottom margins are 2rem / right and left margins are 0 :*/
+  margin: 2rem 0;
+}
+
+.field-group textarea {
+  padding-top: 1rem;
+  min-width: 10rem;
+  min-height: 1rem;
+  max-width: 25rem;
+  max-height: 3rem;
+}
+
+
+.field-label {
+  position: absolute;
+  /* top, em relação ao field-group (elemento pai):*/
+  top: 1rem;
+  left: 0;
+  font-family: var(--font-secundary);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+/* quando um field é focado, o label altera a posição para top: 0*/
+.field:focus ~ label {
+  top: 0;
+  font-size: 1rem;
+}
+
+.field:focus {
+  border-bottom: 1px solid;
+}
+
+.btn-submit{
+  width: 80%;
+  height: 1.5rem;
+  padding: 0.1rem 0.3rem; /* dois valores: 1)top e bottom  2)left e right*/
+}
