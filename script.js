@@ -30,7 +30,7 @@ function atualizaPreco() {
 
   // preco += preco * ((prazo * pctSem)/100);
   let taxaUrgencia = 1 - prazo * 0.1;
-
+  preco *= 1 + taxaUrgencia;
 
   document.querySelector("#preco").innerHTML = `R$ ${preco.toFixed(2)}`;
 }
